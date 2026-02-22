@@ -1,32 +1,43 @@
 # 🐾 PawsConnect
 
-A simple website showcasing various UI elements with a pet-themed design.
+A pet adoption website connecting loving families with pets in need of forever homes.
 
 ## Features
 
-- **Buttons**: Multiple button styles (Primary, Secondary, Success, Danger, Outline)
-- **Input Fields**: Text inputs, email, password, and textarea
-- **Cards**: Responsive card grid layout
-- **Alerts**: Info, Success, Warning, and Error notifications
-- **Progress Bars**: Animated progress indicators
-- **Toggle Switches**: Interactive on/off switches
-- **Modal Dialogs**: Popup overlay functionality
-- **Responsive Design**: Mobile-friendly layout
+- **Search & Filter**: Find pets by type, age, size, and gender
+- **Pet Profiles**: Detailed information about each available pet
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
+- **Interactive UI**: Smooth animations and user-friendly interface
+- **Modal Details**: Click any pet to see full details and adoption information
 
-## Getting Started
+## Available Pets
 
-Simply open `index.html` in your web browser to view the UI elements showcase.
+The site features 24 pets including:
+- Dogs (various breeds and sizes)
+- Cats (different breeds and temperaments)
+- Rabbits (adorable bunnies)
+- Birds (chirpy companions)
+
+## Fake Shelters Included
+
+- Sunshine Animal Shelter
+- Paws & Whiskers Rescue
+- Happy Tails Foundation
+- Meow Town Shelter
+- Canine Companions
+- And many more...
 
 ## Technologies Used
 
 - HTML5
-- CSS3 (with CSS Variables and Flexbox/Grid)
+- CSS3 (Flexbox, Grid, Custom Properties)
 - Vanilla JavaScript
+- Responsive Design
 
-## Live Demo
+## How to View
 
-Open `index.html` in any modern web browser.
+Simply open `index.html` in your web browser to explore the pet adoption platform.
 
 ---
 
-Made with ❤️ for pet lovers
+Made with ❤️ for pet lovers | &copy; 2026 PawsConnect
