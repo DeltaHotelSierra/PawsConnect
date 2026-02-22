@@ -77,15 +77,33 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23667eea" width="1200" height="600"/><path fill="%23764ba2" d="M0 300L50 283.3C100 266.7 200 233.3 300 216.7C400 200 500 200 600 216.7C700 233.3 800 266.7 900 283.3C1000 300 1100 300 1150 300L1200 300L1200 600L1150 600C1100 600 1000 600 900 600C800 600 700 600 600 600C500 600 400 600 300 600C200 600 100 600 50 600L0 600Z"/></svg>') center/cover;
     color: white;
     padding: 4rem 2rem;
     text-align: center;
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(102, 126, 234, 0.1);
+    z-index: 1;
 }
 
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
@@ -521,10 +539,46 @@ body {
 
 /* Page Header */
 .page-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
     color: white;
     padding: 3rem 2rem;
     text-align: center;
+    position: relative;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.page-header-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Specific page header backgrounds */
+.shelters-header {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23d4a574" width="1200" height="400"/><rect fill="%23a67c52" y="200" width="1200" height="200"/></svg>') center/cover;
+}
+
+.about-header {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%2398c379" width="1200" height="400"/><circle fill="%237ab05d" cx="600" cy="200" r="150"/></svg>') center/cover;
+}
+
+.resources-header {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23b8d4a8" width="1200" height="400"/><path fill="%2398c379" d="M0 200L600 100L1200 200L1200 400L0 400Z"/></svg>') center/cover;
 }
 
 .page-header-content h1 {
@@ -535,6 +589,7 @@ body {
 .page-header-content p {
     font-size: 1.1rem;
     opacity: 0.95;
+}
 }
 
 /* Shelters Page */
@@ -1067,6 +1122,125 @@ body {
     background: var(--border-color);
 }
 
+/* Goals & Purpose Section */
+.purpose-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.purpose-card {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s;
+}
+
+.purpose-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.purpose-card h3 {
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.purpose-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Problem We Solve Section */
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.problem-card {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.problem-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    background: white;
+}
+
+.problem-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.problem-card h4 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.problem-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.problem-card p strong {
+    color: var(--text-dark);
+}
+
+/* Target Users Section */
+.users-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.user-card {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.user-card:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.user-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.user-card h3 {
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.user-card:hover h3 {
+    color: white;
+}
+
+.user-card p {
+    color: var(--text-light);
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.user-card:hover p {
+    color: rgba(255, 255, 255, 0.95);
+}
+
 /* Responsive updates */
 @media (max-width: 768px) {
     .form-row {
@@ -1083,7 +1257,10 @@ body {
     .tips-container,
     .resource-links,
     .values-grid,
-    .team-grid {
+    .team-grid,
+    .purpose-content,
+    .problem-grid,
+    .users-grid {
         grid-template-columns: 1fr;
     }
 }

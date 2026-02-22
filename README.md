@@ -13,6 +13,7 @@ A pet adoption website connecting loving families with pets in need of forever h
 ## Available Pets
 
 The site features 24 pets including:
+
 - Dogs (various breeds and sizes)
 - Cats (different breeds and temperaments)
 - Rabbits (adorable bunnies)

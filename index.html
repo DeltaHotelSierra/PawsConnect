@@ -26,6 +26,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
+      <div class="hero-image-overlay"></div>
       <div class="hero-content">
         <h1>Find Your New Best Friend</h1>
         <p>
@@ -123,24 +124,45 @@
         <span class="close" onclick="closeApplicationModal()">&times;</span>
         <div class="application-form-container">
           <h2>Adoption Application</h2>
-          <p class="application-subtitle">Complete this form to begin the adoption process for <strong id="appPetName"></strong></p>
-          
+          <p class="application-subtitle">
+            Complete this form to begin the adoption process for
+            <strong id="appPetName"></strong>
+          </p>
+
           <form id="adoptionForm" onsubmit="submitApplication(event)">
             <!-- Adopter Information (from Adopters table) -->
             <div class="form-section">
               <h3>Your Information</h3>
               <div class="form-group">
                 <label for="adopterName">Full Name *</label>
-                <input type="text" id="adopterName" name="adopter_name" required placeholder="John Doe">
+                <input
+                  type="text"
+                  id="adopterName"
+                  name="adopter_name"
+                  required
+                  placeholder="John Doe"
+                />
               </div>
               <div class="form-row">
                 <div class="form-group">
                   <label for="adopterEmail">Email Address *</label>
-                  <input type="email" id="adopterEmail" name="adopter_email" required placeholder="john.doe@example.com">
+                  <input
+                    type="email"
+                    id="adopterEmail"
+                    name="adopter_email"
+                    required
+                    placeholder="john.doe@example.com"
+                  />
                 </div>
                 <div class="form-group">
                   <label for="adopterPhone">Phone Number *</label>
-                  <input type="tel" id="adopterPhone" name="adopter_phone" required placeholder="(555) 123-4567">
+                  <input
+                    type="tel"
+                    id="adopterPhone"
+                    name="adopter_phone"
+                    required
+                    placeholder="(555) 123-4567"
+                  />
                 </div>
               </div>
             </div>
@@ -148,10 +170,10 @@
             <!-- Application Details (from Applications table) -->
             <div class="form-section">
               <h3>Application Details</h3>
-              <input type="hidden" id="petId" name="pet_id">
-              <input type="hidden" id="shelterId" name="shelter_id">
-              <input type="hidden" id="applicationDate" name="app_date">
-              
+              <input type="hidden" id="petId" name="pet_id" />
+              <input type="hidden" id="shelterId" name="shelter_id" />
+              <input type="hidden" id="applicationDate" name="app_date" />
+
               <div class="form-group">
                 <label for="housingType">Housing Type *</label>
                 <select id="housingType" name="housing_type" required>
@@ -162,28 +184,51 @@
                   <option value="other">Other</option>
                 </select>
               </div>
-              
+
               <div class="form-group">
                 <label for="hasYard">Do you have a yard?</label>
                 <div class="radio-group">
-                  <label><input type="radio" name="has_yard" value="yes"> Yes</label>
-                  <label><input type="radio" name="has_yard" value="no" checked> No</label>
+                  <label
+                    ><input type="radio" name="has_yard" value="yes" />
+                    Yes</label
+                  >
+                  <label
+                    ><input type="radio" name="has_yard" value="no" checked />
+                    No</label
+                  >
                 </div>
               </div>
 
               <div class="form-group">
                 <label for="otherPets">Do you have other pets?</label>
-                <textarea id="otherPets" name="other_pets" rows="2" placeholder="Please describe any current pets"></textarea>
+                <textarea
+                  id="otherPets"
+                  name="other_pets"
+                  rows="2"
+                  placeholder="Please describe any current pets"
+                ></textarea>
               </div>
 
               <div class="form-group">
                 <label for="experience">Pet Experience *</label>
-                <textarea id="experience" name="experience" rows="3" required placeholder="Tell us about your experience with pets"></textarea>
+                <textarea
+                  id="experience"
+                  name="experience"
+                  rows="3"
+                  required
+                  placeholder="Tell us about your experience with pets"
+                ></textarea>
               </div>
 
               <div class="form-group">
                 <label for="reason">Why do you want to adopt this pet? *</label>
-                <textarea id="reason" name="reason" rows="3" required placeholder="Share your reasons for wanting to adopt"></textarea>
+                <textarea
+                  id="reason"
+                  name="reason"
+                  rows="3"
+                  required
+                  placeholder="Share your reasons for wanting to adopt"
+                ></textarea>
               </div>
             </div>
 
@@ -193,18 +238,36 @@
               <div class="form-row">
                 <div class="form-group">
                   <label for="vetName">Veterinarian Name</label>
-                  <input type="text" id="vetName" name="vet_name" placeholder="Dr. Smith">
+                  <input
+                    type="text"
+                    id="vetName"
+                    name="vet_name"
+                    placeholder="Dr. Smith"
+                  />
                 </div>
                 <div class="form-group">
                   <label for="vetPhone">Veterinarian Phone</label>
-                  <input type="tel" id="vetPhone" name="vet_phone" placeholder="(555) 987-6543">
+                  <input
+                    type="tel"
+                    id="vetPhone"
+                    name="vet_phone"
+                    placeholder="(555) 987-6543"
+                  />
                 </div>
               </div>
             </div>
 
             <div class="form-actions">
-              <button type="button" class="btn btn-secondary" onclick="closeApplicationModal()">Cancel</button>
-              <button type="submit" class="btn btn-primary">Submit Application</button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="closeApplicationModal()"
+              >
+                Cancel
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Submit Application
+              </button>
             </div>
           </form>
         </div>
